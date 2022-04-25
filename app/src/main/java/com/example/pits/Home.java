@@ -3,6 +3,7 @@ package com.example.pits;
 //import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -27,8 +28,26 @@ public class Home extends AppCompatActivity {
         //create custom toolbar rather than default Actionbar
         createCustomToolbar();
 
+        //myRecycle View
+        myRecycleView();
 
     }
+  //**********//myRecycle View
+    private void myRecycleView() {
+        ArrayList<String>mWordList;
+        RecyclerView myRecyclerView;
+        mWordList=new ArrayList<>();
+        mWordList.add("Text1");
+        mWordList.add("Text2");
+        mWordList.add("Text3");
+        mWordList.add("Text4 ");
+
+
+        myRecyclerView=findViewById(R.id.myrecyclerview);
+        CustomAdapter myAdabter=new CustomAdapter(mWordList);
+        myRecyclerView.setAdapter(myAdabter);
+    }
+    //**********//myRecycle View
 
     //**************OptionsMenu mytoolbar
     public void createCustomToolbar(){

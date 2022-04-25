@@ -16,4 +16,29 @@
     <string name="home_country">Egypt</string>
     <string name="display">VIEW ALL</string>
     <string name='paragraph'>these are our main categories of animals,slide the grid to see more.</string>
+
+
+
+    <string name="popular_card_title1">ذكر وانثى سيامي من ام سيام...</string>
+    <string name="popular_card_title2">Labrador retriever</string>
+    <string name="popular_card_title3">section2</string>
+    <string name="popular_card_title4">section5</string>
+
+    <string name="popular_card_money1">OTHER400.00$</string>
+    <string name="popular_card_money2">$900.00</string>
+    <string name="popular_card_money3">section5</string>
+    <string name="popular_card_money4">section5</string>
+
+    <string name="popular_card_saler1">Nareman Nany</string>
+    <string name="popular_card_saler2">Alexia West</string>
+    <string name="popular_card_saler3">section5</string>
+    <string name="popular_card_saler4">section5</string>
+
+    <string name="popular_card_state1">Buy</string>
+    <string name="popular_card_state2">Sell</string>
+
+    <string name="popular_card_Country1">Egypt</string>
+    <string name="popular_card_Country2">America</string>
+
+    <string name="popular_card_Month1">7 month ago</string>
 </resources>
