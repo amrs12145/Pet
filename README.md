@@ -7,11 +7,11 @@
 
 
             # Welcome
-![welcome](https://github.com/amrs12145/pet/blob/master/screenshots/welcome.png)
+![welcome](https://github.com/amrs12145/pet/blob/master/app/screenshots/welcome.png)
 
             # Orientation Screen
-![orientation](https://github.com/amrs12145/pet/blob/master/screenshots/orientation.png)
+![orientation](https://github.com/amrs12145/pet/blob/master/app/screenshots/orientation.png)
 
 
             # ScrollView Screen
-![scroll](https://github.com/amrs12145/pet/blob/master/screenshots/list.png)
+![scroll](https://github.com/amrs12145/pet/blob/master/app/screenshots/list.png)
