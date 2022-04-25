@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Pet Store</string>
+    <string name="title_activity_home">Home</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="home_item1">Categorie</string>
+    <string name="home_item2">Recent Uploaded Items</string>
+    <string name="home_item3">Popular Items</string>
+    <string name="home_country">Egypt</string>
+    <string name="display">VIEW ALL</string>
+    <string name='paragraph'>these are our main categories of animals,slide the grid to see more.</string>
+</resources>
