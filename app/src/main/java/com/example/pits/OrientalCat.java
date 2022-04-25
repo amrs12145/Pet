@@ -21,7 +21,7 @@ public class OrientalCat extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(view !=null){
-                    Intent intent=new Intent(view.getContext(),SecActivity.class);
+                    Intent intent=new Intent(view.getContext(),Home.class);
                     startActivity(intent);
                 }
 

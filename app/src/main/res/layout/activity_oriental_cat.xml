@@ -5,18 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gray_white"
+    android:background="@drawable/gradient_pw"
     tools:context=".OrientalCat">
     <!--SideAction-->
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="40dp"
         android:layout_height="65dp"
-        android:background="@drawable/circle_image"
+        android:background="@drawable/ring_p3"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/guideline8"
-        app:srcCompat="@drawable/cat3" />
+        app:srcCompat="@drawable/im_pur1cat" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -114,7 +114,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toTopOf="@+id/guideline3"
-        app:srcCompat="@drawable/vecteezy" />
+        app:srcCompat="@drawable/im_gray2cat" />
     <!--ROW1-->
     <!--ROW2-->
     <TextView
@@ -154,7 +154,7 @@
         android:id="@+id/newButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/rect_rounded_button"
+        android:background="@drawable/rectanc_20_lg"
         android:backgroundTint="@color/lightGreen"
         android:paddingLeft="60dp"
         android:paddingRight="60dp"
@@ -212,6 +212,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.98" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

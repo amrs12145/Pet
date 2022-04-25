@@ -14,7 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pit8" />
+        app:srcCompat="@drawable/bac_p" />
 
 
     <ImageView
@@ -70,7 +70,7 @@
         android:id="@+id/newButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/rect_rounded_button"
+        android:background="@drawable/rectanc_20_lg"
         android:backgroundTint="@color/lightGreen"
         android:paddingLeft="60dp"
         android:paddingRight="60dp"

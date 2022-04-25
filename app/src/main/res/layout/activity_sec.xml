@@ -191,7 +191,7 @@
         <ImageView
             android:layout_width="726dp"
             android:layout_height="300px"
-            android:src="@drawable/cat"
+            android:src="@drawable/im_pur1cat"
 
 
             ></ImageView>
