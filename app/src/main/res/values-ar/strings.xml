@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">اشترك</string>
+    <string name="Login">تسجيل الدخول</string>
+    <string name="Email">البريد الالكتروني</string>
+    <string name="Password">كلمة المرور</string>
+    <string name="forget">نسيت كلمة المرور</string>
+    <string name="create">انشاء حساب جديد !</string>
+    <string name="OR">او</string>
+
+    <string-array name="languages">
+        <item name="English"></item>
+        <item name="Arabic"></item>
+    </string-array>
+</resources>
