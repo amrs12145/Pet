@@ -3,7 +3,10 @@ package com.example.pits;
 //import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,6 +21,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Home extends AppCompatActivity {
+    private ArrayList<String>mWordList;
+    private RecyclerView myRecyclerView;
+    private HomeReceiver customReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +33,30 @@ public class Home extends AppCompatActivity {
         //create custom toolbar rather than default Actionbar
         createCustomToolbar();
 
+        //myRecycle View
+        myRecycleView(myRecyclerView,mWordList);
 
+        //customBroadcastReceiver
+        customHomeReceiver(customReceiver);
     }
+
+
+
+    //**********//myRecycle View
+    private void myRecycleView(RecyclerView myRecyclerView ,ArrayList<String>mWordList) {
+
+        mWordList=new ArrayList<>();
+        mWordList.add("Text1");
+        mWordList.add("Text2");
+        mWordList.add("Text3");
+        mWordList.add("Text4 ");
+
+
+        myRecyclerView=findViewById(R.id.myrecyclerview);
+        CustomAdapter myAdabter=new CustomAdapter(mWordList);
+        myRecyclerView.setAdapter(myAdabter);
+    }
+    //**********//myRecycle View
 
     //**************OptionsMenu mytoolbar
     public void createCustomToolbar(){
@@ -62,6 +90,25 @@ public class Home extends AppCompatActivity {
         }
     }
     //**************OptionsMenu mytoolbar
+    private void customHomeReceiver(HomeReceiver customReceiver) {
+        customReceiver=new HomeReceiver();
+
+        IntentFilter filter = new IntentFilter(); //Specify type of Actions will be received by customReceiver
+        filter.addAction(Intent.ACTION_POWER_DISCONNECTED);
+        filter.addAction(Intent.ACTION_POWER_CONNECTED);
+        filter.addAction(Intent.ACTION_HEADSET_PLUG);
 
 
+        // Register the receiver using the activity context.
+        this.registerReceiver(customReceiver, filter);
+    }
+    //**********customHomeReceiver
+
+    //onDestroy
+    @Override
+    protected void onDestroy() {
+        //Unregister the receiver
+        this.unregisterReceiver(customReceiver);
+        super.onDestroy();
+    }
 }
