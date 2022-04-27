@@ -9,7 +9,7 @@
     <include
         android:id="@+id/mytoolbar"
         layout="@layout/mytoolbar"
-        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteX="-107dp"
         tools:layout_editor_absoluteY="0dp" />
 
     <LinearLayout
@@ -111,8 +111,21 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
-
-
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="336dp"
+        android:layout_marginTop="484dp"
+        android:layout_marginEnd="26dp"
+        android:background="@drawable/leave"
+        android:drawableLeft="@drawable/logout_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/mytoolbar"
+        app:layout_constraintHorizontal_bias="0.677"
+        app:layout_constraintStart_toStartOf="@+id/mytoolbar"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

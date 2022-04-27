@@ -6,10 +6,12 @@
     <string name="Password">كلمة المرور</string>
     <string name="forget">نسيت كلمة المرور</string>
     <string name="create">انشاء حساب جديد !</string>
+    <string name="toast"> ... </string>
+    <string name="Save">تذكرني</string>
     <string name="OR">او</string>
-
+    <string name="Ar">En</string>
     <string-array name="languages">
-        <item name="English"></item>
-        <item name="Arabic"></item>
+        <item name="English">انجليزي</item>
+        <item name="Arabic">عربي</item>
     </string-array>
 </resources>

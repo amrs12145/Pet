@@ -7,12 +7,14 @@
     <string name="forget">Forget password </string>
     <string name="create">Create new Account !</string>
     <string name="OR">OR</string>
+    <string name="Save">Remember me</string>
+    <string name="toast">This is a toast</string>
+    <string name="Ar">Ar</string>
 
     <string-array name="languages">
         <item name="English"></item>
         <item name="Arabic"></item>
     </string-array>
-
 
 
 </resources>

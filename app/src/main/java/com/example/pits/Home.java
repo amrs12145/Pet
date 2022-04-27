@@ -4,11 +4,15 @@ package com.example.pits;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Adapter;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Filter;
 import android.widget.ListView;
 import android.widget.SearchView;
@@ -18,11 +22,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Home extends AppCompatActivity {
+    private static final String FILE_NAME = "myFile";
+    private Button logout_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        Bundle b=getIntent().getExtras();
+        String email=b.getString("email");
+        logout_button= findViewById(R.id.login_button);
+        logout_button=findViewById(R.id.login_button);
+        SharedPreferences sharedPreferences=getSharedPreferences(FILE_NAME,MODE_PRIVATE);
+        String Email=sharedPreferences.getString("Email","Data not found");
+        logout_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),SigninActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
         //create custom toolbar rather than default Actionbar
         createCustomToolbar();
