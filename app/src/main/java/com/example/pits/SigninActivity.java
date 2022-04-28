@@ -34,10 +34,12 @@ public class SigninActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
-        getActionBar().hide();
+        setContentView(R.layout.activity_signin);
+//        getActionBar().hide();
 
         login_button = findViewById(R.id.login_button);
+        Button save_data = findViewById(R.id.save_data);
+
         save = findViewById(R.id.save);
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
@@ -65,11 +67,13 @@ public class SigninActivity extends AppCompatActivity {
                 Intent intent = new Intent(SigninActivity.this, RegisterActivity.class);
                 startActivity(intent);
 //or
-                startActivity(new Intent(SigninActivity.this, RegisterActivity.class));
+//                startActivity(new Intent(SigninActivity.this, RegisterActivity.class));
 
 
             }
         });
+
+
 
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,19 +85,20 @@ public class SigninActivity extends AppCompatActivity {
                 }
 
                 if (save.isChecked()){
-
+                    getPreferences(Email,Password);
                 }
 
-                //String registeredEmail=preferences("Email","");
-                String registeredEmail = preferences.getString("Email", "Email");
-                String registeredPassword = preferences.getString("Password", "Password");
-                if (Email.equals(registeredEmail) && Password.equals(registeredPassword)) {
-                    Intent intent = new Intent(getApplicationContext(), Home.class);
-                    Bundle b = new Bundle();
-                    b.putString("email", email.getText().toString());
-                    b.putString("password", password.getText().toString());
-                    intent.putExtras(b);
-                    startActivity(intent);
+
+//                //String registeredEmail=preferences("Email","");
+//                String registeredEmail = preferences.getString("Email", "Email");
+//                String registeredPassword = preferences.getString("Password", "Password");
+//                if (Email.equals(registeredEmail) && Password.equals(registeredPassword)) {
+//                    Intent intent = new Intent(getApplicationContext(), Home.class);
+//                    Bundle b = new Bundle();
+//                    b.putString("email", email.getText().toString());
+//                    b.putString("password", password.getText().toString());
+//                    intent.putExtras(b);
+//                    startActivity(intent);
 
                 }
 
@@ -106,8 +111,10 @@ public class SigninActivity extends AppCompatActivity {
                 // intent.putExtra("password",password.getText().toString());
                 //   startActivity(intent);
 
-            }
+
         });
+
+
 
 
     }
@@ -122,8 +129,17 @@ public class SigninActivity extends AppCompatActivity {
 //        editor.commit();
     }
 
-    private void getPreferences(){
-
+    private void getPreferences(String Email,String Password){
+        //String registeredEmail=preferences("Email","");
+        String registeredEmail = preferences.getString("Email", "Email");
+        String registeredPassword = preferences.getString("Password", "Password");
+        if (Email.equals(registeredEmail) && Password.equals(registeredPassword)) {
+            Intent intent = new Intent(getApplicationContext(), Home.class);
+            Bundle b = new Bundle();
+            b.putString("email", email.getText().toString());
+            b.putString("password", password.getText().toString());
+            intent.putExtras(b);
+            startActivity(intent);
     }
-}
+}}
 

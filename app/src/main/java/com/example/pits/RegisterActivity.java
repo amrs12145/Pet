@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class RegisterActivity extends AppCompatActivity {
+
     private Button register_button;
     EditText email , password ,confirm_password;
     SharedPreferences preferences;
@@ -22,7 +23,7 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        getActionBar().hide();
+//        getActionBar().hide();
 
         email= findViewById(R.id.email);
         password= findViewById(R.id.password);
@@ -55,18 +56,19 @@ public class RegisterActivity extends AppCompatActivity {
         Aleady_have_account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(RegisterActivity.this, SigninActivity.class));
+                startActivity(new Intent(view.getContext(), SigninActivity.class));
+
 
             }
         });
 
-        register_button=findViewById(R.id.register_button);
-        register_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(RegisterActivity.this, SigninActivity.class));
-            }
-        });
+//        register_button=findViewById(R.id.register_button);
+//        register_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(view.getContext(), SigninActivity.class));
+//            }
+//        });
 
     }
 }
