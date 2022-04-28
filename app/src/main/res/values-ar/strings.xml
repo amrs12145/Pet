@@ -18,6 +18,7 @@
     <string name='paragraph'>these are our main categories of animals,slide the grid to see more.</string>
 
 
+
     <string name="popular_card_title1">ذكر وانثى سيامي من ام سيام...</string>
     <string name="popular_card_title2">Labrador retriever</string>
     <string name="popular_card_title3">section2</string>
@@ -42,6 +43,7 @@
     <string name="popular_card_Month1">7 month ago</string>
 
 
+
     <string name="Login">تسجيل الدخول</string>
     <string name="Email">البريد الالكتروني</string>
     <string name="Password">كلمة المرور</string>
@@ -55,5 +57,6 @@
         <item name="English">انجليزي</item>
         <item name="Arabic">عربي</item>
     </string-array>
+
 
 </resources>

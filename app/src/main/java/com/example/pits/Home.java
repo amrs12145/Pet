@@ -10,12 +10,15 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Adapter;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Filter;
 import android.widget.ListView;
 import android.widget.SearchView;
@@ -24,7 +27,12 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Home extends AppCompatActivity {
+public class Home extends AppCompatActivity implements View.OnClickListener {
+
+    private static final String FILE_NAME = "myFile";
+    private Button logout_button;
+    private Button myButton;
+
     private ArrayList<String>mWordList;
     private ArrayList<Integer>cardImage;
     private RecyclerView myRecyclerView;
@@ -36,6 +44,7 @@ public class Home extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
@@ -50,7 +59,30 @@ public class Home extends AppCompatActivity {
 
         //custom Notification create chanel to specify notification configrition
         createNotificationChannel();
+
+//        moveToSignIn();
+
+        myButton = findViewById(R.id.myButton);
+        myButton.setOnClickListener(this);
     }
+
+//    protected void moveToSignIn(){
+//        Bundle b=getIntent().getExtras();
+//        String email=b.getString("email");
+//        logout_button= findViewById(R.id.login_button);
+//        logout_button=findViewById(R.id.login_button);
+//        SharedPreferences sharedPreferences=getSharedPreferences(FILE_NAME,MODE_PRIVATE);
+//        String Email=sharedPreferences.getString("Email","Data not found");
+//        logout_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent=new Intent(getApplicationContext(),SigninActivity.class);
+//                startActivity(intent);
+//
+//            }
+//        });
+//    }
+
 
 
 
@@ -163,4 +195,16 @@ public class Home extends AppCompatActivity {
         this.unregisterReceiver(customReceiver);
         super.onDestroy();
     }
+
+    @Override
+    public void onClick(View view) {
+        switch(view.getId()){
+            case R.id.myButton:
+                Intent intent=new Intent(view.getContext(),SigninActivity.class);
+                startActivity(intent);
+                break;
+        }
+    }
+
+
 }
